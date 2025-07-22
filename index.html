@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="Quizon">
+                <a href="#">Quizon</a>
+            </div>
+            <ul>
+                <li><a href="#" class="active">❔Manifest Quiz Test❔</a></li>
+            </ul>
+        </div>
+       
+        <div class="quiz-container">
+            <div class="question">
+                Manifest grubunun ilk konseri ne zamandı?
+            </div>
+            <div class="options">
+                <button onclick="checkAnswer(this,'question1')">Ocak</button>
+                <button onclick="checkAnswer(this,'question1')">Şubat</button>
+                <button onclick="checkAnswer(this,'question1')">Mart</button>
+                <button onclick="checkAnswer(this,'question1')">Nisan</button>
+            </div>
+            <div id="result-1"> </div>
+        </div>
+    
+            <div class="quiz-container">
+             <div class="question">
+              Manifest grubunun ikinci şarkısı nedir?
+            </div>
+            <div class="options">
+                <button onclick="checkAnswer(this,'question2')">Zamansızdık</button>
+                <button onclick="checkAnswer(this,'question2')">Öpücük</button>
+                <button onclick="checkAnswer(this,'question2')">Arıyo</button>
+                <button onclick="checkAnswer(this,'question2')">KTS</button>
+            </div>
+            <div id="result-2"></div>
+        </div>
+
+ 
+
+    <div class="quiz-container">
+        <div class="question">
+        "Manifam'ı temsil eden renk nedir"
+       </div>
+       <div class="options">
+           <button onclick="checkAnswer(this,'question3')">Yeşil</button>
+           <button onclick="checkAnswer(this,'question3')">Mavi</button>
+           <button onclick="checkAnswer(this,'question3')">Pembe</button>
+           <button onclick="checkAnswer(this,'question3')">Turuncu</button>
+       </div>
+       <div id="result-3"></div>
+   </div>
+</div>
+
+
+
+
+
+            <script>
+            function checkAnswer(button,questionId) {
+            const correctAnswers= {
+                "question1":"Şubat",
+                "question2":"Arıyo",
+                "question3":"Turuncu",};
+            const resultElement = document.getElementById(`result-${questionId.slice(-1)}`);
+            const allButtons=button.parentElement.querySelectorAll("button")
+
+            allButtons.forEach(btn=> {
+                btn.disabled=true;
+                btn.style.backgroundColor="";
+            });
+
+
+            if (button.innerText === correctAnswers[questionId]) {
+                resultElement.innerText = "Doğru cevap! 🎉";
+                resultElement.style.color = "green";
+                button.style.backgroundColor="#c8e6c9";
+            } else {
+                resultElement.innerText = "Yanlış cevap! 😢";
+                resultElement.style.color = "red";
+                button.style.backgroundColor="#ffcdd2";
+            }
+        }
+    </script>
+</body>
+</html>
