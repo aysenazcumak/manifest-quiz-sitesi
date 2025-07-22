@@ -1,0 +1,114 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+.container{
+ background:url(yeni-proje-6-1750062425\ \(1\).png);
+ height:cover;
+ background-size:cover;
+ background-position:center;
+}
+
+
+.navbar {
+    width:100%;
+    height:80px;
+    background:rgb(255,255,255);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+
+} 
+
+    .navbar.Quizon {
+    display:inline-block;
+}  
+
+
+.navbar .Quizon a{
+    text-decoration:none;
+    font-size:45px;
+    font-family:sans-serif;
+    color:#FFC0CB;
+    font-weight:bold
+
+}  
+
+.navbar ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    margin-right:610px;
+}
+
+.navbar ul li a{
+    color:pink;
+    text-decoration:none;
+    font-size:20px;
+    padding:12px 24px;
+    transition:0.3s;
+    border-radius:20px;
+  
+  
+
+} 
+.navbar ul li a.active,
+.navbar ul li a:hover {
+    background: rgb(227,5,153);
+    color: white;
+   
+}
+.quiz-container{
+    max-width:400px;
+    margin:40px auto;
+    padding:40px;
+    background-color:rgba(255,255,255,0.8);
+    border-radius:20px ;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1) ;
+}  
+.question-container{
+    margin:30px;
+}  
+.question {
+    font-size:18px;
+    margin-bottom:15px;
+    font-weight:bold;
+    color:black;
+}
+.options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+   
+}
+
+.options button{
+    width:100%;
+    padding:8px 15px;
+    background-color:#f8d0e2;
+    border:none;
+    border-radius: 8px;
+    cursor:pointer;
+    text-align:left;
+    transition:background-color 0.3s;
+    font-size:16px;
+
+}
+
+.options button:hover{
+    background-color:#f0b6cf;
+}
+
+
+#result{
+    margin-top:20px;
+    font-weight:bold;
+    font-size:18px;
+    color:#e30599;
+    text-align:center;
+} 
+
